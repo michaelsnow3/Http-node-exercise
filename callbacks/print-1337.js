@@ -14,10 +14,9 @@ function print1337 (html) {
     var change = false;
     //check string for multiple letter cases before single letter changes
     for (var letters in multiChange) {
-      var length = letters.length;
-      if (html.substr(i, length) === letters) {
+      if (html.substr(i, letters.length) === letters) {
         outputString += multiChange[letters];
-        i += length - 1;
+        i += letters.length - 1;
         change = true;
       }
     }
